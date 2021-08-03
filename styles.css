@@ -127,16 +127,34 @@ hr{
  html{
      scroll-behavior: smooth;
  }
- .up{
-     position: fixed;
-     right: 20px;
-     bottom: 20px;
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     background: #96bedb;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-     outline: none;
-     cursor: pointer;
-     border: none;
+ .scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #96bedb;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+ @media only screen and (max-width: 100px){
+
  }
